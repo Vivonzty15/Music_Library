@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { SearchContext } from '../context/searchContext'
+import Button  from 'react-bootstrap/Button'
 
 function SearchBar() {
 
@@ -10,7 +11,7 @@ function SearchBar() {
 
             <input ref={term} type="text" placeholder="Search here" />
 
-            <button onClick={ (e) => handleSearch(e, term.current.value) } >Submit</button>
+            <Button variant='success' onClick={ (e) => handleSearch(e, term.current.value) } >Submit</Button>
 
         </form>
     )
